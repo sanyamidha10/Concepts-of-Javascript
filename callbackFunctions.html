@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+    </head>
+    <body>
+
+        <script>
+            // Here myFunc is passed as an argument inside setTimeout(), so myFunc is used as a callback function
+            // Moreover, asynchronus programming is also shown in this example.
+
+            setTimeout(myFunc, 5000);
+            function myFunc(){
+                console.log("Sanya Midha this side");
+            }
+
+            // someFunc is passed as reference to myFunc3 as an argument inside myFunc2 that is why myFunc3 is callback function
+            const myFunc2 = (someFunc) =>{
+                console.log("This is the second function but running at first");
+                someFunc();
+            }
+
+            function myFunc3(){
+                console.log("i am function 3");
+            }
+
+            myFunc2(myFunc3);
+        </script>
+    
+    </body>
+</html>

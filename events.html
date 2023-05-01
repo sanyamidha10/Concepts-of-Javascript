@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+    </head>
+    <body>
+
+        <div>
+            <p id="h">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui amet, dicta asperiores sequi repudiandae tempore nostrum impedit eveniet ipsa facilis voluptates quasi optio quisquam eos nemo labore pariatur soluta ratione.</p>
+        </div>
+
+        <button onclick="myfunc()">Click Me</button>
+        <button onmousedown="mouse()">Click Me</button>
+        <button onmouseout="mouse2()">Click Me</button>
+        <button onkeyup="key()">Click Me</button>
+
+        <script type="text/javascript">
+
+            function myfunc(){
+                console.log("click")
+                document.body.style.backgroundColor = "blue";
+                document.getElementById('h').setAttribute("style", "color:white");
+            }
+
+            function mouse(){
+                console.log("onmousedown")
+                document.body.style.backgroundColor = 'brown';
+                document.getElementById('h').setAttribute("style", "color:white");
+            }
+
+            function mouse2(){
+                console.log("onmouseout")
+                document.body.style.backgroundColor = 'yellow';
+                document.getElementById('h').setAttribute("style", "color:white");
+            }
+
+
+            function key(){
+                console.log("onkeyup")
+                document.body.style.backgroundColor = 'orange';
+                document.getElementById('h').setAttribute("style", "color:white");
+            }
+
+
+        </script>
+
+    
+    </body>
+</html>

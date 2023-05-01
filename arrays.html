@@ -1,0 +1,35 @@
+<script type="text/javascript">
+
+    var friends = ['sanya', 'satyam', 'neetu', 'manish', 'vikram'];
+    document.write(friends);
+    document.write('<br></br>');
+    document.write(friends.length);
+    document.write('<br></br>');
+
+    friends.pop();
+    friends.push("vikram");
+
+    friends.shift();
+    friends.unshift('sanya');
+
+    friends.reverse();
+
+    for(var i=0; i<friends.length; i++){
+        document.write(friends[i]+" ");
+    }
+    document.write('<br></br>');
+
+
+    document.write(Array.isArray(friends));
+
+    document.write('<br></br>');
+
+    arr2 = ['midha', 'rana'];
+    document.write(friends.concat(arr2))
+
+    document.write('<br></br>');
+
+    document.write(friends.indexOf('manish'));
+
+    // document.write(friends.sort()+" ");
+</script>

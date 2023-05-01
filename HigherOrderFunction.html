@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const interviewQuestions = (name) =>{
+            if(name=='Sanya'){
+                return function(topic){
+                    console.log(`Hi ${name}, Explain the topic ${topic}`);
+                }
+            }
+            else{
+                return function(topic){
+                    console.log(`Hi ${name} , how are you? Speak few lines on ${topic}`)
+                }
+            }
+        };
+
+        interviewQuestions('Sanya')('UI');
+        interviewQuestions('Satyam')('Django');
+    </script>
+</body>
+</html>
