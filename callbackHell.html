@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+    </head>
+    <body>
+
+        <script>
+
+            // const getRollNumber = () =>{
+            //     setTimeout(()=>{
+
+            //         let rollNumber = [1, 2, 3, 4, 5];
+            //         console.log(rollNumber);
+
+            //         setTimeout((roll)=>{
+            //             const biodata = {
+            //                 name: 'sanya',
+            //                 age: 21
+            //             };
+
+            //             console.log(`my roll number is ${roll}. My name is ${biodata.name} and i am ${biodata.age} years old.`);
+
+            //             setTimeout((name)=>{
+            //                 biodata.gender = 'female';
+
+            //                 console.log(` I am ${biodata.gender} my roll number is ${roll}. My name is ${name} and i am ${biodata.age} years old.`);
+            //             }, 2000, biodata.name);
+
+            //         }, 2000, rollNumber[2]);
+
+            //     }, 2000);
+            // }
+            
+
+
+            // getRollNumber();
+
+
+            const myFunc = () =>{
+                setTimeout(()=>{
+                    console.log("One");
+
+                    setTimeout(()=>{
+                        console.log("Two");
+
+                        setTimeout(()=>{
+                            console.log("Three");
+                        }, 2000)
+
+
+                    }, 2000);
+                    
+                }, 2000)
+
+            }
+            myFunc();
+
+        </script>
+
+
+    
+    </body>
+</html>

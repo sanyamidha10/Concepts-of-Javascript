@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        class Students{
+            constructor(name, age){
+                this.name = name;
+                this.age = age;
+            }
+
+            biodata(){
+                return `Hi, ${this.name} this side, I am ${this.age} years old`;
+            }
+        }
+
+        class Player extends Students{
+            constructor(name, age, game){
+                super(name, age);
+                this.game = game;
+            }
+
+            // biodata(){
+            //     console.log(`Hi, ${this.name} this side, I am ${this.age} years old. I love to play ${this.game}`);
+            // }
+
+            player_biodata(){
+                return `${super.biodata()}. I love to play ${this.game}`;
+            }
+        }
+
+
+        let obj1 = new Player('Sanya', 21, 'Badminton')
+        console.log(obj1.player_biodata());
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+    </head>
+    <body>
+        
+        <script>
+            class Students{
+
+                constructor(name, age){
+                    this.names = name;
+                    this.ages = age;
+                }
+
+
+                biodata(){
+                    console.log(`Hi , my name is ${this.names}, i am ${this.ages} years old`);
+                }
+            }
+
+            let st1 = new Students('sanya', 21);
+            st1.biodata();
+        </script>
+
+    </body>
+</html>
