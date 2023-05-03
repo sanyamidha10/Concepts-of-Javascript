@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+    </head>
+    <body>
+
+        <script>
+            let obj1 = new Promise((resolve, reject)=>{
+                setTimeout(()=>{
+                    let rollno = [1, 2, 3, 4];
+                    resolve(rollno);
+                }, 2000);
+            })
+
+            const getData = (roll)=>{
+                return new Promise((resolve, reject)=>{
+                    setTimeout((roll)=>{
+                        let bio = {
+                            name:'sanya',
+                            age:21
+                        };
+                        resolve(`My name is ${bio.name}, I am ${bio.age} years old and my roll numer is ${roll}`);
+                    },2000, roll);
+                })
+            }
+
+            async function getAllFunc(){
+                try{
+                    let rollnumbers  = await obj1;
+                    console.log(rollnumbers);
+
+                    let func2 = await getData(rollnumbers[2]);
+                    console.log(func2);
+                }
+                catch(error){
+                    console.log(`The error is: ${error}`);
+                }
+            }
+            getAllFunc();
+
+
+        </script>
+    
+    </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+</head>
+
+<body>
+
+    <script>
+        // After 2s -> roll numbers list display
+        // After 2s -> biodata of a particular roll number
+
+        // Promise produce
+        const obj1 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                let roll_no = [1, 2, 3, 4, 5];
+                resolve(roll_no);
+                reject('Error displaying roll numbers');
+            }, 2000);
+        })
+        // Another promise produce
+        const biodata = (indexdata) => {
+            return new Promise((reolve, reject) => {
+                setTimeout((indexdata) => {
+                    let bio = {
+                        name: 'sanya',
+                        age: 21
+                    };
+                    reolve(`My roll number is ${indexdata}, My name is ${bio.name} and i am ${bio.age} years old`);
+                    reject('Error displaying biodata');
+                }, 2000, indexdata)
+            })
+        }
+
+
+        // Promise consume
+        obj1.then((rollno) => {
+            console.log(rollno);
+            // Promise consume
+            return biodata(rollno[2]);
+            biodata(rollno[2])
+        }).then((something) => {
+            console.log(something);
+        }).catch((error) => {
+                console.log(error);
+            })
+
+
+
+    </script>
+
+</body>
+
+</html>
