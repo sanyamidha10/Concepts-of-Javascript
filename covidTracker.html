@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+    </head>
+    <body>
+
+        <script>
+                
+            async function apidata(index){
+                try{
+                    const data = await fetch('https://api.covid19api.com/summary');
+                    const jsondata = await data.json();
+                    const country_name = jsondata.Countries[`${index}`];
+                    console.log(`Country is ${country_name.Country}, There are ${country_name.TotalConfirmed} total confirmed cases and ${country_name.TotalDeaths} deaths .`)
+                }
+                catch(error){
+                    console.log(error);
+                }
+            }
+
+            apidata(77);
+        </script>
+    
+    </body>
+</html>

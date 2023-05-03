@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+    </head>
+    <body>
+
+        <p id="para"></p>
+
+        <script>
+            fetch('https://api.covid19api.com/summary').then((res)=>{
+                // console.log(res);
+                return res.json();
+            }).then((actualdata)=>{
+                // console.log(actualdata);
+                const mydata = actualdata.Countries[77];
+                console.log(mydata);
+                document.getElementById("para").innerHTML = `Country is ${mydata.Country}, There are ${mydata.TotalConfirmed} total confirmed cases and ${mydata.TotalDeaths} deaths .`
+                
+            }).catch((error)=>{
+                console.log(error);
+            })
+        </script>
+    
+    </body>
+</html>
